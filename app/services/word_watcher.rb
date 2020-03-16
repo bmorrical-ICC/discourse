@@ -7,7 +7,7 @@ class WordWatcher
   end
 
   def self.words_for_action(action)
-    WatchedWord.where(action: WatchedWord.actions[action.to_sym]).limit(1000).pluck(:word)
+    WatchedWord.where(action: WatchedWord.actions[action.to_sym]).limit(3000).pluck(:word)
   end
 
   def self.words_for_action_exists?(action)
